@@ -1,0 +1,1 @@
+# Lipstick Slot\n\nMobile lipstick slot game (MAC, YSL, NYX).
