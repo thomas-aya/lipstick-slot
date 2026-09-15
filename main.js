@@ -1,19 +1,19 @@
 // Lipstick symbols data
 const LIPSTICKS = {
   // MAC - bold black/red theme
-  MAC_RUBY: { brand: 'MAC', shade: 'Ruby Woo', color: '#d31818', cap: '#000' },
-  MAC_VELVET: { brand: 'MAC', shade: 'Velvet Teddy', color: '#9b5b5b', cap: '#000' },
-  MAC_CANDY: { brand: 'MAC', shade: 'Candy Yum-Yum', color: '#ff3399', cap: '#000' },
+  MAC_RUBY: { brand: 'MAC', shade: 'Ruby Woo', image: '/symbols/mac-ruby.jpg' },
+  MAC_VELVET: { brand: 'MAC', shade: 'Velvet Teddy', image: '/symbols/mac-velvet.jpg' },
+  MAC_CANDY: { brand: 'MAC', shade: 'Candy Yum-Yum', image: '/symbols/mac-candy.jpg' },
   
   // YSL - gold/black luxury theme
-  YSL_ROUGE: { brand: 'YSL', shade: 'Rouge Pur', color: '#b91b1b', cap: '#d4af37' },
-  YSL_NUDE: { brand: 'YSL', shade: 'Nude Beige', color: '#c4a088', cap: '#d4af37' },
-  YSL_ROSE: { brand: 'YSL', shade: 'Rose Stiletto', color: '#e91e63', cap: '#d4af37' },
+  YSL_ROUGE: { brand: 'YSL', shade: 'Rouge Pur', image: '/symbols/ysl-rouge.jpg' },
+  YSL_NUDE: { brand: 'YSL', shade: 'Nude Beige', image: '/symbols/ysl-nude.jpg' },
+  YSL_ROSE: { brand: 'YSL', shade: 'Rose Stiletto', image: '/symbols/ysl-rose.jpg' },
   
   // NYX - playful neon/black theme
-  NYX_NEON: { brand: 'NYX', shade: 'Neon Pink', color: '#ff10f0', cap: '#000' },
-  NYX_BERRY: { brand: 'NYX', shade: 'Berry Blast', color: '#8e24aa', cap: '#000' },
-  NYX_CORAL: { brand: 'NYX', shade: 'Coral Pop', color: '#ff6b6b', cap: '#000' }
+  NYX_NEON: { brand: 'NYX', shade: 'Neon Pink', image: '/symbols/nyx-neon.jpg' },
+  NYX_BERRY: { brand: 'NYX', shade: 'Berry Blast', image: '/symbols/nyx-berry.jpg' },
+  NYX_CORAL: { brand: 'NYX', shade: 'Coral Pop', image: '/symbols/nyx-coral.jpg' }
 };
 
 const SYMBOL_KEYS = Object.keys(LIPSTICKS);
@@ -72,88 +72,25 @@ function playSound(type) {
   }
 }
 
-// Create SVG lipstick symbol
-function createLipstickSVG(symbolKey) {
+// Create lipstick photo element
+function createLipstickImage(symbolKey) {
   const lipstick = LIPSTICKS[symbolKey];
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('viewBox', '0 0 100 100');
-  svg.setAttribute('width', '100%');
-  svg.setAttribute('height', '100%');
+  const container = document.createElement('div');
+  container.className = 'lipstick-photo-container';
   
-  // Cap
-  const cap = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-  cap.setAttribute('x', '35');
-  cap.setAttribute('y', '10');
-  cap.setAttribute('width', '30');
-  cap.setAttribute('height', '25');
-  cap.setAttribute('rx', '3');
-  cap.setAttribute('fill', lipstick.cap);
-  cap.setAttribute('stroke', lipstick.cap === '#000' ? '#333' : '#b8860b');
-  cap.setAttribute('stroke-width', '1');
-  svg.appendChild(cap);
+  const img = document.createElement('img');
+  img.src = lipstick.image;
+  img.alt = `${lipstick.brand} ${lipstick.shade}`;
+  img.className = 'lipstick-photo';
   
-  // Cap detail
-  const capDetail = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  capDetail.setAttribute('x1', '38');
-  capDetail.setAttribute('y1', '22');
-  capDetail.setAttribute('x2', '62');
-  capDetail.setAttribute('y2', '22');
-  capDetail.setAttribute('stroke', lipstick.cap === '#000' ? '#555' : '#ffd700');
-  capDetail.setAttribute('stroke-width', '1');
-  svg.appendChild(capDetail);
+  const label = document.createElement('div');
+  label.className = 'lipstick-label';
+  label.textContent = lipstick.brand;
   
-  // Base tube
-  const base = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-  base.setAttribute('x', '38');
-  base.setAttribute('y', '35');
-  base.setAttribute('width', '24');
-  base.setAttribute('height', '45');
-  base.setAttribute('rx', '2');
-  base.setAttribute('fill', '#1a1a1a');
-  base.setAttribute('stroke', '#333');
-  base.setAttribute('stroke-width', '1');
-  svg.appendChild(base);
+  container.appendChild(img);
+  container.appendChild(label);
   
-  // Brand label area
-  const label = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-  label.setAttribute('x', '40');
-  label.setAttribute('y', '50');
-  label.setAttribute('width', '20');
-  label.setAttribute('height', '15');
-  label.setAttribute('fill', lipstick.cap);
-  label.setAttribute('opacity', '0.3');
-  svg.appendChild(label);
-  
-  // Lipstick tip
-  const tip = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-  tip.setAttribute('points', '50,15 45,32 55,32');
-  tip.setAttribute('fill', lipstick.color);
-  tip.setAttribute('stroke', '#000');
-  tip.setAttribute('stroke-width', '0.5');
-  svg.appendChild(tip);
-  
-  // Lipstick shine
-  const shine = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
-  shine.setAttribute('cx', '48');
-  shine.setAttribute('cy', '22');
-  shine.setAttribute('rx', '2');
-  shine.setAttribute('ry', '4');
-  shine.setAttribute('fill', '#fff');
-  shine.setAttribute('opacity', '0.4');
-  svg.appendChild(shine);
-  
-  // Brand text
-  const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-  text.setAttribute('x', '50');
-  text.setAttribute('y', '90');
-  text.setAttribute('text-anchor', 'middle');
-  text.setAttribute('font-size', '8');
-  text.setAttribute('font-weight', 'bold');
-  text.setAttribute('fill', lipstick.cap === '#d4af37' ? '#d4af37' : '#fff');
-  text.textContent = lipstick.brand;
-  svg.appendChild(text);
-  
-  return svg;
+  return container;
 }
 
 // Get random symbol
@@ -245,7 +182,7 @@ async function spin() {
     reel.classList.remove('spinning');
     const symbolDiv = reel.querySelector('.symbol');
     symbolDiv.innerHTML = '';
-    symbolDiv.appendChild(createLipstickSVG(results[i]));
+    symbolDiv.appendChild(createLipstickImage(results[i]));
   });
   
   // Check for win
@@ -333,7 +270,7 @@ function init() {
   const reelElements = document.querySelectorAll('.reel');
   reelElements.forEach(reel => {
     const symbolDiv = reel.querySelector('.symbol');
-    symbolDiv.appendChild(createLipstickSVG(getRandomSymbol()));
+    symbolDiv.appendChild(createLipstickImage(getRandomSymbol()));
   });
   
   // Event listeners

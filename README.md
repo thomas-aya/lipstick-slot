@@ -86,9 +86,51 @@ npm run preview
 - **Vite**: Schneller Build-Tool und Dev-Server
 - **Vanilla JavaScript**: Keine Framework-Abhängigkeiten
 - **CSS3**: Moderne Animationen und Layouts
-- **SVG**: Hochauflösende Lippenstift-Grafiken
+- **Royalty-Free Fotos**: Echte Lippenstift-Bilder von Unsplash und Pexels
 - **Web Audio API**: Native Browser-Sounds
 
 ## ⚠️ Hinweis
 
 Nur zur Unterhaltung. Kein echtes Geld. Keine Backend-Verbindung. Alle Daten bleiben lokal im Browser.
+
+## 📸 Bildnachweis / Photo Credits
+
+Alle Lippenstift-Bilder stammen von lizenzfreien Foto-Plattformen und dienen als visuelle Darstellung. Sie sind keine offiziellen Produktfotos der genannten Marken.
+
+### MAC Ruby Woo
+- Foto von [Unsplash](https://unsplash.com/photos/a-red-tube-of-lipstick-sitting-on-top-of-a-table-beTexSDYhyE)
+- Lizenz: [Unsplash License](https://unsplash.com/license) (Kostenlos zu nutzen)
+
+### MAC Velvet Teddy
+- Foto von [Curology](https://unsplash.com/@curology) auf [Unsplash](https://unsplash.com/photos/a-tube-of-lipstick-on-a-white-background-whFWuMdV6o8)
+- Lizenz: [Unsplash License](https://unsplash.com/license)
+
+### MAC Candy Yum-Yum
+- Foto von [Unsplash](https://unsplash.com/photos/a-pink-lipstick-with-a-black-stick-sticking-out-of-it-tkO7bnBIVv8)
+- Lizenz: [Unsplash License](https://unsplash.com/license)
+
+### YSL Rouge Pur
+- Foto von [Unsplash](https://unsplash.com/photos/red-liquid-lipstick-bottles-with-applicator-Zh03fQzaC_8)
+- Lizenz: [Unsplash License](https://unsplash.com/license)
+
+### YSL Nude Beige
+- Foto von [Shiny Diamond](https://www.pexels.com/@shiny-diamond-170186) auf [Pexels](https://www.pexels.com/photo/red-and-nude-lipsticks-3373744/)
+- Lizenz: [Pexels License](https://www.pexels.com/license/) (Kostenlos zu nutzen)
+
+### YSL Rose Stiletto
+- Foto von [Suzy Hazelwood](https://www.pexels.com/@suzyhazelwood) auf [Pexels](https://www.pexels.com/photo/pink-lipstick-1213558/)
+- Lizenz: [Pexels License](https://www.pexels.com/license/)
+
+### NYX Neon Pink
+- Foto von [Muhammad Tayyab](https://unsplash.com/@3dvisuals_cg) auf [Unsplash](https://unsplash.com/photos/a-pink-and-purple-background-with-a-lipstick-tube-CB-KEGGHLk8)
+- Lizenz: [Unsplash License](https://unsplash.com/license)
+
+### NYX Berry Blast
+- Foto von [MART PRODUCTION](https://www.pexels.com/@mart-production) auf [Pexels](https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-red-lipstick-on-violet-background-7290717/)
+- Lizenz: [Pexels License](https://www.pexels.com/license/)
+
+### NYX Coral Pop
+- Foto von [Charlotte Knight](https://unsplash.com/@charrosephotography) auf [Unsplash](https://unsplash.com/photos/an-orange-lipstick-sitting-on-top-of-a-table-s3SvWyErLuM)
+- Lizenz: [Unsplash License](https://unsplash.com/license)
+
+**Hinweis**: Die gezeigten Bilder sind nicht mit MAC, Yves Saint Laurent oder NYX verbunden oder von diesen autorisiert. Marken- und Farbtonnamen dienen nur zur Identifizierung der Slot-Symbole.
